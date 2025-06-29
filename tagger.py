@@ -87,7 +87,7 @@ class WaifuDiffusionTagger:
         config = self.models[self.model_name]
         
         # Download model and tags
-        print(f"Loading {self.model_name} model...")
+        # print(f"Loading {self.model_name} model...")
         model_path = hf_hub_download(
             repo_id=config['repo_id'],
             filename=config['model_path']
@@ -110,7 +110,7 @@ class WaifuDiffusionTagger:
         
         # Load tags
         self.tags = read_csv(tags_path)
-        print(f"Loaded {len(self.tags)} tags")
+        # print(f"Loaded {len(self.tags)} tags")
         
     def preprocess_image(self, image: Image.Image) -> np.ndarray:
         """Preprocess image for inference"""
